@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Header, Icon, Image, Menu, Segment, Sidebar, Input, Container, Button, Card, Grid } from 'semantic-ui-react'
 import Login from '../Login/Login'
- 
+import { MainContent } from "./MainContent";
 export class Dashboard extends Component {
     render() {
         return (
@@ -16,6 +16,10 @@ export class Dashboard extends Component {
                     visible
                     width='thin'
                     >
+                    <Menu.Item as='a' >
+                        <Icon name='user circle' />
+                        My Account
+                    </Menu.Item>
                     <Menu.Item as='a'>
                         <Icon name='home' />
                         Home
@@ -31,153 +35,15 @@ export class Dashboard extends Component {
                     </Sidebar>
                 </Grid.Column>
                 <Grid.Column width={12} textAlign='center' style={{paddingTop: '100px', paddingLeft: '220px'}}>
-                <Grid.Column width={4} >
-                    <Card.Group >
-                        <Card floated='right'> <Card.Content>
-      <Card.Header>Matthew</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        Matthew is a musician living in Nashville.
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content></Card>
-                        <Card floated='right'> <Card.Content>
-      <Card.Header>Matthew</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        Matthew is a musician living in Nashville.
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content></Card>
-                        <Card floated='right'> <Card.Content>
-      <Card.Header>Matthew</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        Matthew is a musician living in Nashville.
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content></Card>
-                    </Card.Group>
-                </Grid.Column>
-                <Grid.Column width={4} >
-                    <Card.Group>
-                        <Card floated='right'> <Card.Content>
-      <Card.Header>Matthew</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        Matthew is a musician living in Nashville.
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content></Card>
-                        <Card floated='right'> <Card.Content>
-      <Card.Header>Matthew</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        Matthew is a musician living in Nashville.
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content></Card>
-                        <Card floated='right'> <Card.Content>
-      <Card.Header>Matthew</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        Matthew is a musician living in Nashville.
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content></Card>
-                    </Card.Group>
-                </Grid.Column>
-                <Grid.Column width={4} >
-                    <Card.Group>
-                        <Card floated='right'> <Card.Content>
-      <Card.Header>Matthew</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        Matthew is a musician living in Nashville.
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content></Card>
-                        <Card floated='right'> <Card.Content>
-      <Card.Header>Matthew</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        Matthew is a musician living in Nashville.
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content></Card>
-                        <Card floated='right'> <Card.Content>
-      <Card.Header>Matthew</Card.Header>
-      <Card.Meta>
-        <span className='date'>Joined in 2015</span>
-      </Card.Meta>
-      <Card.Description>
-        Matthew is a musician living in Nashville.
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-        <Icon name='user' />
-        22 Friends
-      </a>
-    </Card.Content></Card>
-                    </Card.Group>
-                </Grid.Column>
+                    <Grid.Column width={4} >
+                        <MainContent />
+                    </Grid.Column>
+                    <Grid.Column width={4} >
+                        <MainContent />
+                    </Grid.Column>
+                    <Grid.Column width={4} >
+                        <MainContent />
+                    </Grid.Column>
                 </Grid.Column>
                 <Grid.Column width={2}>
                     <Button negative floated='right' size='large' style={{marginLeft: '60px', marginTop: '30px'}}>Logout</Button>
