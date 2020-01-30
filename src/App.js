@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 import { Header, Icon, Image, Menu, Segment, Sidebar, Input, Container } from 'semantic-ui-react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
-import  Home  from "./Home/Home";
-import Login from "./Login/Login"
+import  Home  from "./components/Home/Home";
+import Login from "./components/Login/Login"
  // Importing Zoom effect
 import './App.css';
-import Dashboard from './Dashboard/Dashboard';
+import Dashboard from './components/Dashboard/Dashboard';
 
 class App extends Component {
   render() {

@@ -2,10 +2,24 @@ import React, { Component } from 'react'
 import { Header, Icon, Image, Menu, Segment, Sidebar, Input, Container, Button, Card, Grid } from 'semantic-ui-react'
 import Login from '../Login/Login'
 import { MainContent } from "./MainContent";
+import { CreateEventModal } from "../Events/CreateEventModal";
+
+import { connect } from "react-redux";
+import { openModal } from "../../actions/index";
+
 export class Dashboard extends Component {
+    state = {openState: false}
+    componentDidMount(){
+        
+    }
+    componentWillReceiveProps(nextProps){
+        console.log(nextProps)
+        this.setState({openState: nextProps.state.openState})
+    }
     render() {
         return (
             <Grid centered columns={3} padded='horizontally'>
+                <CreateEventModal openState={this.state.openState} />
                 <Grid.Column width={2}>
                     <Sidebar
                     as={Menu}
@@ -20,17 +34,16 @@ export class Dashboard extends Component {
                         <Icon name='user circle' />
                         My Account
                     </Menu.Item>
-                    <Menu.Item as='a'>
-                        <Icon name='home' />
-                        Home
-                    </Menu.Item>
-                    <Menu.Item as='a'>
-                        <Icon name='gamepad' />
-                        Games
-                    </Menu.Item>
-                    <Menu.Item as='a'>
-                        <Icon name='camera' />
-                        Channels
+                    <Menu.Item as='a' onClick={()=>{
+                        if(this.state.openState == true){
+                            this.props.openModal(false)
+                            this.props.openModal(true)
+                        }else{
+                            this.props.openModal(true)
+                        }
+                        }}> 
+                        <Icon name='plus' />
+                        Create Event
                     </Menu.Item>
                     </Sidebar>
                 </Grid.Column>
@@ -38,7 +51,7 @@ export class Dashboard extends Component {
                     <Grid.Column width={4} >
                         <MainContent />
                     </Grid.Column>
-                    <Grid.Column width={4} >
+                    <Grid.Column width={4} >x
                         <MainContent />
                     </Grid.Column>
                     <Grid.Column width={4} >
@@ -52,5 +65,17 @@ export class Dashboard extends Component {
         )
     }
 }
-
-export default Dashboard
+const mapStateToProps = (state) => {
+    console.log(state)
+    return {
+        state
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        openModal: (data) => {
+            dispatch(openModal(data))
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)

@@ -3,7 +3,7 @@ import React from 'react'
 import Zoom from 'react-reveal/Zoom'
 
 import  HeaderExampleUsersIcon  from "./BrowseArrow"
-import  logo  from '../306455.png'
+import  logo  from '../../306455.png'
 
 const Home = () => {
 
