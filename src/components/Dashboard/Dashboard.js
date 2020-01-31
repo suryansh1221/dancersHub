@@ -45,13 +45,17 @@ export class Dashboard extends Component {
                         <Icon name='plus' />
                         Create Event
                     </Menu.Item>
+                    <Menu.Item as='a' >
+                        <Icon name='info' />
+                        Your Events
+                    </Menu.Item>
                     </Sidebar>
                 </Grid.Column>
                 <Grid.Column width={12} textAlign='center' style={{paddingTop: '100px', paddingLeft: '220px'}}>
                     <Grid.Column width={4} >
                         <MainContent />
                     </Grid.Column>
-                    <Grid.Column width={4} >x
+                    <Grid.Column width={4} >
                         <MainContent />
                     </Grid.Column>
                     <Grid.Column width={4} >

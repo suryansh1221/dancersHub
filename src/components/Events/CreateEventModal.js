@@ -81,9 +81,7 @@ export class CreateEventModal extends Component {
                             />
                         </Form.Field>
                     </Form.Group>
-                    <Form.Group>
-                        
-                    </Form.Group> 
+                    
                     <Form.Group widths='equal'>
                         <Form.Field
                             label='Event'
@@ -142,7 +140,9 @@ export class CreateEventModal extends Component {
                             placeholder='e.g. 99345xxxxx'
                         />
                     </Form.Group>
-                   
+                   <Form.Group fluid widths='equal'>
+                       <Form.Field label='Description' control='input' />
+                   </Form.Group>
                     </Form>
                 </Modal.Content>
                 <Modal.Actions>
