@@ -4,17 +4,16 @@ export class MainContent extends Component {
     render() {
         return (
             <Card.Group >
-                        <Card > <Card.Content>
-      <Card.Header>
-        <div style={{fontFamily: 'Comic Sans MS'}}>
-          Matthew
-        </div>
-      </Card.Header>
+                        <Card floated='right'> <Card.Content>
+      <Card.Header style={{fontSize: '28px', color:'indianred'}}>Battle</Card.Header>
       <Card.Meta>
-        <span className='date'>Joined in 2015</span>
+        <span className='date' style={{color: 'gray'}}>Blame It On The Boogie</span>
+      </Card.Meta>
+      <Card.Meta>
+        <span className='date'>01/02/2015</span>
       </Card.Meta>
       <Card.Description>
-        Matthew is a musician living in Nashville.
+        Matthew is a musician living in.....
       </Card.Description>
     </Card.Content>
     <Card.Content extra >
