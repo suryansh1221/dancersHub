@@ -1,21 +1,22 @@
-import { Header } from "semantic-ui-react"
-import React from 'react'
-import Zoom from 'react-reveal/Zoom'
+import {Header} from 'semantic-ui-react';
+import React from 'react';
+import Zoom from 'react-reveal/Zoom';
 
-import  HeaderExampleUsersIcon  from "./BrowseArrow"
-import  logo  from '../../306455.png'
+import HeaderExampleUsersIcon from './BrowseArrow';
+import logo from '../../306455.png';
 
 const Home = () => {
-
-    return (
+  return (
     <Zoom>
-        <header className="App-header">
+      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Header style={{color:'white'}}> Data Structures and Algorithms </Header>
+        <Header style={{color: 'white'}}>
+            Data Structures and Algorithms
+        </Header>
         <HeaderExampleUsersIcon />
-        </header>
+      </header>
     </Zoom>
-    )
-}
+  );
+};
 
-export default Home
+export default Home;
